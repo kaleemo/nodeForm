@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = 'stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>Here's a form and list</p>
+    <form method = 'POST' action = '/' >
+      Entry 1: <input type = 'text' name = 'entry1' value = '' /><br>
+      Entry 2: <input type = 'text' name = 'entry2' value = '' /><br>
+      Entry 3: <input type = 'text' name = 'entry3' value = '' /><br>
+      <input type = 'submit' value = 'Submit'/>
+    </form>
+    <br>
+
+    <ul id = 'outputList'>
+
+    </ul>
+
+    <script type = 'text/javascript'>
+      var localDataList = <%- JSON.stringify( dataList ) %>
+    </script>
+
+    <script type = 'text/javascript' src = '/javascripts/indexFront.js'></script>
+    <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <script src = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  </body>
+</html>
